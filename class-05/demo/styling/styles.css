@@ -1,0 +1,25 @@
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+section {
+  display: inline-block;
+  width: calc(100% - 210px);
+  overflow-x: wrap;
+}
+
+nav {
+  height: 100%;
+  width: 200px;
+  background-color: black;
+  color: white;
+  display: inline-block;
+  vertical-align: top;
+}
+
+h2 {
+  font-size: 50px;
+  margin: 20px 0;
+  text-align: center;
+}
