@@ -9,7 +9,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
+  var solution, solutionArray=[];
 
+  solution = a + b;
+  solutionArray[0] =solution;
+  solutionArray[1] = "The sum of " + a + " and " + b + " is " + solution  + ".";
+  return solutionArray;
 }
 
 // Here is the test for sum(); uncomment it to run it
