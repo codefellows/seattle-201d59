@@ -139,11 +139,29 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  var textArray, solutionArray=[];
+
+  solutionArray[0]=1;     //stablish position is a number
+  solutionArray[1]="";    //stablish position is a text
+  textArray = "";
+
+  for (var i=0; i < multArr.length; i++)
+  {
+    solutionArray[0] = multiply(solutionArray[0],multArr[i])[0];
+    textArray = textArray + multArr[i] + ",";
+  }
+
+  // remove the last coma and add the text to the 1 position
+  textArray = "The numbers " + textArray.slice(0,textArray.length-1) + " have a product of " + solutionArray[0] + ".";
+  solutionArray[1] = textArray;
+
+  //console.log("textArray:" + textArray);
+  return solutionArray;
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
