@@ -8,6 +8,7 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
+
 function sum(num1, num2) { //eslint-disable-line
   var result = num1 + num2;
   var answer = ('The sum of ' + num1 +  ' and ' + num2 + ' is ' + result + '.');
@@ -15,6 +16,8 @@ function sum(num1, num2) { //eslint-disable-line
   console.log([result, 'The sum of ' + num1 + ' and ' + num2 +  ' is ' + result +'.']);
   
   return(myArray);
+
+
 }
 
 // Here is the test for sum(); uncomment it to run it
