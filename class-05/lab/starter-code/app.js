@@ -27,8 +27,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
+
 function multiply(a, b) { //eslint-disable-line
-var times = a * b ;
+ var times = a * b ;
 return([times , 'The product of ' + a + ' and ' + b + ' is ' + times + '.']);
 }
 
@@ -48,26 +49,24 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
-// Write your code here
+// Write your code here 
 function sumAndMultiply(a, b, c) { //eslint-disable-line
- function multiply() {
-  var product = a * b * c;
-  return(product);
-};
-function sum() {
-  var add = a + b + c ;
-  return (add)
-}
-console.log([sum(), multiply(), a + ' and ' + b +' and ' +c + ' sum to '+ sum() + '.'
-,'The product of ' + a + ' and ' + b + ' and ' + c + ' is '+ multiply() + '.']);
+  var productArr = multiply(a,b) // [28, 'thsbkdbckshdbc']
+  var prodOfAB = productArr[0];
+ var productOfABC = multiply(prodOfAB, c);
+var sumArr = sum(a,b);
+var sumAB = sumArr[0];
+ var sumABC = sum(sumAB,c);
 
-return([sum(), multiply(), a + ' and ' + b +' and ' +c + ' sum to '+ sum() + '.'
- ,'The product of ' + a + ' and ' + b + ' and ' + c + ' is '+ multiply() + '.'])
+ var result = [sumABC[0], productOfABC[0] , a + ' and ' + b + ' and ' + c + ' sum to ' + sumABC[0] + '.'  , 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productOfABC[0] + '.' ];
 
-}
-
+console.log(result);
+return result;
+ };
 // Here is the test for sumAndMultiply(); uncomment it to run it
  testSumAndMultiply(4,7,5);
+
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -85,9 +84,15 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
- 
+ function sum() {
+   var add = testArray[0] + testArray[1] + testArray[2];
+   return(add);
+ };
+ console.log([sum() , testArray[0] + testArray[1] + testArray[2] + ' was passed in as an array of numbers, and ' + sum() +' is their sum.']);
+ return([sum(), testArray[0] + testArray[1] + testArray[2] + ' was passed in as an array of numbers, and ' + sum() +' is their sum.']);
 }
+ 
+
 
 // Here is the test for sumArray(); uncomment it to run it
 
