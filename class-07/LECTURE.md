@@ -1,6 +1,7 @@
 # Class 07
 
 ## Object Constructor functions
+
 A way of creating objects using a function
 
 ```js
@@ -44,6 +45,11 @@ console.log(Seattle.age) // 0
 ```
 
 ## HTML Tables
+
+- Tables are made up of 'rows'
+- Each 'row' contains 'cells'
+- `<tr>` is our table row element.
+- `<td>` make up the cells in the row.
 
 ```html
 
