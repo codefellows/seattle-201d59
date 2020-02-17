@@ -14,9 +14,8 @@ Suggestion:
 ## Code Review
 
 - Chocolate Pizza:
-  -  Let's look at some examples:
-  -  Thanks Robert and Jesse for your code examples.
-
+  - Let's look at some examples:
+  - Thanks Robert and Jesse for your code examples.
 
 ## Audio and Video in HTML
 
@@ -66,3 +65,12 @@ Suggestion:
 </audio>
 
 ```
+
+## Bus Mall Intro
+
+- Building a Click Tracker to track clicks on images
+- Using constructors to build objects with initialized properties
+- Incrementing values when images are clicked.
+  - Using an event listener to select elements and grab data for an `Image`.
+
+[Click Tracker Demo](./demo)
