@@ -9,11 +9,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
+  var solutionArray=[];
 
+  solutionArray[0] = a + b;
+  solutionArray[1] = "The sum of " + a + " and " + b + " is " + solutionArray[0]  + ".";
+
+  //console.log(solutionArray);
+  // console.log("sum function");
+  return solutionArray;
 }
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -27,11 +34,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
+  var solutionArray=[];
 
+  solutionArray[0] = a * b;
+  solutionArray[1] = "The product of " + a + " and " + b + " is " + solutionArray[0]  + ".";
+  return solutionArray;
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -48,11 +59,29 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  var solutionArray=[];
+
+  // sum (a+b) + c, and stored in array[0] 
+  solutionArray[0] = sum((sum(a,b)[0]),c)[0];
+  
+  // multiply (a*b) * c, and stored in array[1]
+  solutionArray[1] = multiply((multiply(a,b)[0]),c)[0];
+
+  // store leyends
+  solutionArray[2] = (a + " and " + b + " and " + c + " sum to " + solutionArray[0] + ".");
+  solutionArray[3] = ("The product of " + a + " and " + b + " and " + c + " is " + solutionArray[1] + ".");
+
+  //console.log("My franky sum:" + solutionArray[0]);
+  //console.log("My franky multiply:" + solutionArray[1]);
+  //console.log("My franky sum leyend:" + solutionArray[2]);
+  //console.log("My franky multiply leyend:" + solutionArray[3]);
+
+  return solutionArray;
 
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+ testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -70,12 +99,31 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+  var textArray, solutionArray=[];
 
+  solutionArray[0]=0;     //stablish position is a number
+  solutionArray[1]="";    //stablish position is a text
+  textArray = "";
+
+  for (var i=0; i < sumArr.length; i++)
+  {
+    solutionArray[0] = sum(solutionArray[0],sumArr[i])[0];
+    textArray = textArray + sumArr[i] + ",";
+  }
+
+  // remove the last coma and add the text to the 1 position
+  textArray = textArray.slice(0,textArray.length-1);
+  textArray = textArray + " was passed in as an array of numbers, and " + solutionArray[0] + " is their sum.";
+  solutionArray[1] = textArray;
+
+  //console.log("textArray:" + textArray);
+
+  return solutionArray;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+ testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
