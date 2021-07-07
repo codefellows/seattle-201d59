@@ -1,7 +1,10 @@
 'use strict';
 /////////////////////////////////////
 /* Problem 1 (this is your demo that we'll solve in class)
-Write a function called sum() that takes in two numbers as arguments and then returns an array where the first element is the sum of those numbers, and the second element is a concatenated string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called sum() that takes in two numbers as arguments and then returns an array where the 
+//first element is the sum of those numbers, and the second element is a concatenated string that EXACTLY follows this example and uses the values that were input into the function:
+
+// [11, " of 4 and 7 is 11."]
 
 "The sum of 4 and 7 is 11."
 
@@ -9,11 +12,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-
+  var plus = a + b;
+  var myArr = [plus, 'The sum of ' + a + ' and ' + b + ' is ' + plus + '.' ];
+  
+  return myArr;
 }
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -27,11 +33,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
+  var multiply = a * b;
+  var multiplyArr = [multiply, 'The product of ' + a + ' and ' + b + ' is ' + multiply + '.'];
+  console.log(multiplyArr);
+
+  return multiplyArr;
 
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -48,11 +59,22 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  var sumAndMultiplyArr = [16, 140, a + ' and ' + b + ' and ' + c + ' sum to 16.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is 140.'];
+  var helpMe = sum (a, b)[0];
+  var newSum = sum(helpMe, c)[0];
+  console.log(newSum);
+  var pleaseHelpMe = multiply (a, b)[0];
+  var newMultiply = multiply (pleaseHelpMe, c)[0];
+  console.log(newMultiply);
+
+  return sumAndMultiplyArr;
+  // console.log(sumAndMultiplyArr);
+  
 
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -70,12 +92,18 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+var add1 = sum(testArray[0], testArray[1])[0];
+console.log(add1);
+var add2 = sum(add1, testArray[2])[0];
+console.log(add2);
+var comboSumArray = [add2, testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + add2 + ' is their sum.']
+console.log(comboSumArray);
+return comboSumArray;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -91,11 +119,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+var times1 = multiply(testArray[0], testArray[1])[0];
+console.log(times1);
+var times2 = multiply(times1, testArray[2])[0];
+console.log(times2);
+var pleaseWork = [times2, 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + times2 + '.']
+console.log(pleaseWork);
+return pleaseWork;
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
